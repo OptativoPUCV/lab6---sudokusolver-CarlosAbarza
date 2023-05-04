@@ -171,3 +171,8 @@ sudoku.c:134:18: error: ‘temp’ undeclared (first use in this function)
 sudoku.c:134:18: note: each undeclared identifier is reported only once for each function it appears in
 Compilation failed
 87f99a9
+Thu 04 May 2023 04:13:23 AM UTC: 
+ sudoku.c | 5 +++--
+ 1 file changed, 3 insertions(+), 2 deletions(-)
+ tests:  0|0
+377ba6c
