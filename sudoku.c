@@ -121,7 +121,8 @@ Node* DFS(Node* initial, int* cont){
   Node *aux;
   push(pila, initial);
   while (1) {
-    aux = pop(pila);
+    aux = (Node*) top(pila);
+    pop(pila);
     if (is_final(aux)) 
       return aux;
     List *adj = get_adj_nodes(aux);

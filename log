@@ -141,3 +141,16 @@ sudoku.c:130:21: error: invalid use of incomplete typedef ‘List’
       |                     ^~
 Compilation failed
 f431764
+Thu 04 May 2023 04:07:04 AM UTC: 
+ sudoku.c | 3 ++-
+ 1 file changed, 2 insertions(+), 1 deletion(-)
+In file included from test.c:5:
+sudoku.c: In function ‘DFS’:
+sudoku.c:130:15: error: invalid use of incomplete typedef ‘List’
+  130 |     while (adj->current) {
+      |               ^~
+sudoku.c:131:21: error: invalid use of incomplete typedef ‘List’
+  131 |       push(pila, adj->current);
+      |                     ^~
+Compilation failed
+1fcd799
