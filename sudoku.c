@@ -60,9 +60,9 @@ int is_valid(Node* n){
 
       if (n->sudo[j][i] != 0) {
         if (col[n->sudo[j][i]] == 0) {
-          col[n->sudo[i][j]] = 1;
+          col[n->sudo[j][i]] = 1;
         }
-        else if (col[n->sudo[j][i]] == 1) {
+        else {
           return 0;
         }
       }
