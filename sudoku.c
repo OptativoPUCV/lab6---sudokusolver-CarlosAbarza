@@ -133,7 +133,7 @@ Node* DFS(Node* initial, int* cont){
       else 
         temp = next(adj);
       push(pila, temp);
-      free(temp)
+      free(temp);
     }
     free(aux);
   }
