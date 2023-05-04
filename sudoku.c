@@ -124,6 +124,7 @@ Node* DFS(Node* initial, int* cont){
     aux = (Node*) top(pila);
     if (!aux) break;
     pop(pila);
+    (*cont)++;
     if (is_final(aux)) 
       return aux;
     List *adj = get_adj_nodes(aux);
