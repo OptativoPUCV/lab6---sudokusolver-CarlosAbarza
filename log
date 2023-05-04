@@ -125,3 +125,19 @@ Thu 04 May 2023 03:53:30 AM UTC:
  tests:  7|1
 total_score: 55/70
 d79de62
+Thu 04 May 2023 04:04:01 AM UTC: 
+ sudoku.c | 15 +++++++++++++++
+ 1 file changed, 15 insertions(+)
+In file included from test.c:5:
+sudoku.c: In function ‘DFS’:
+sudoku.c:124:9: error: void value not ignored as it ought to be
+  124 |     aux = pop(pila);
+      |         ^
+sudoku.c:129:15: error: invalid use of incomplete typedef ‘List’
+  129 |     while (adj->current) {
+      |               ^~
+sudoku.c:130:21: error: invalid use of incomplete typedef ‘List’
+  130 |       push(pila, adj->current);
+      |                     ^~
+Compilation failed
+f431764
