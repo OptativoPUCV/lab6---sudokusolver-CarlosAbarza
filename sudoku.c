@@ -126,10 +126,12 @@ Node* DFS(Node* initial, int* cont){
     if (is_final(aux)) 
       return aux;
     List *adj = get_adj_nodes(aux);
-    first(adj);
-    while (adj->current) {
-      push(pila, adj->current);
-      next(adj);
+    for (int i = 0; i < get_size(adj); i++) {
+      if (i == 0)
+        Node *temp = first(adj);
+      else 
+        Node *temp = next(adj);
+      push(pila, temp);
     }
     free(aux);
   }

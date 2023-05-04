@@ -154,3 +154,20 @@ sudoku.c:131:21: error: invalid use of incomplete typedef ‘List’
       |                     ^~
 Compilation failed
 1fcd799
+Thu 04 May 2023 04:12:26 AM UTC: 
+ sudoku.c | 10 ++++++----
+ 1 file changed, 6 insertions(+), 4 deletions(-)
+In file included from test.c:5:
+sudoku.c: In function ‘DFS’:
+sudoku.c:131:9: error: expected expression before ‘Node’
+  131 |         Node *temp = first(adj);
+      |         ^~~~
+sudoku.c:133:9: error: expected expression before ‘Node’
+  133 |         Node *temp = next(adj);
+      |         ^~~~
+sudoku.c:134:18: error: ‘temp’ undeclared (first use in this function)
+  134 |       push(pila, temp);
+      |                  ^~~~
+sudoku.c:134:18: note: each undeclared identifier is reported only once for each function it appears in
+Compilation failed
+87f99a9
