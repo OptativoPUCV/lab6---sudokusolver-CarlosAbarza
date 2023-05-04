@@ -52,14 +52,14 @@ int is_valid(Node* n){
       if (fil[n->sudo[i][j]] == 0) {
         fil[n->sudo[i][j]] = 1;
       }
-      else {
+      else if (fil[n->sudo[i][j]] == 1) {
         return 0;
       }
 
       if (col[n->sudo[j][i]] == 0) {
         col[n->sudo[i][j]] = 1;
       }
-      else {
+      else if (col[n->sudo[j][i]] == 1) {
         return 0;
       }
     }
