@@ -122,6 +122,7 @@ Node* DFS(Node* initial, int* cont){
   push(pila, initial);
   while (1) {
     aux = (Node*) top(pila);
+    if (!aux) break;
     pop(pila);
     if (is_final(aux)) 
       return aux;
@@ -135,6 +136,7 @@ Node* DFS(Node* initial, int* cont){
       push(pila, temp);
     }
     free(aux);
+    
   }
   return NULL;
 }
