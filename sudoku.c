@@ -68,7 +68,7 @@ int is_valid(Node* n){
         }
       }
 
-      if (i == 1 || i == 4 || i == 7) {
+      if (i == 0 || i == 3 || i == 6) {
         int f=3*(i/3) + (j/3) ;
         int c=3*(i%3) + (j%3) ;
         if (n->sudo[f][c] != 0) {
