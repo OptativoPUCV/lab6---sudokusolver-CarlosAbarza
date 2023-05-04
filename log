@@ -176,3 +176,16 @@ Thu 04 May 2023 04:13:23 AM UTC:
  1 file changed, 3 insertions(+), 2 deletions(-)
  tests:  0|0
 377ba6c
+Thu 04 May 2023 04:14:42 AM UTC: 
+ sudoku.c | 1 +
+ 1 file changed, 1 insertion(+)
+In file included from test.c:5:
+sudoku.c: In function ‘DFS’:
+sudoku.c:136:17: error: expected ‘;’ before ‘}’ token
+  136 |       free(temp)
+      |                 ^
+      |                 ;
+  137 |     }
+      |     ~            
+Compilation failed
+45f596c
