@@ -49,18 +49,22 @@ int is_valid(Node* n){
     int col[10] = {0};
     // int sub[10] = {0};
     for (int j = 0; j < 9; j++) {
-      if (fil[n->sudo[i][j]] == 0) {
-        fil[n->sudo[i][j]] = 1;
-      }
-      else if (fil[n->sudo[i][j]] == 1) {
-        return 0;
+      if (n->sudo[i][j] != 0) {
+        if (fil[n->sudo[i][j]] == 0) {
+          fil[n->sudo[i][j]] = 1;
+        }
+        else {
+          return 0;
+        }
       }
 
-      if (col[n->sudo[j][i]] == 0) {
-        col[n->sudo[i][j]] = 1;
-      }
-      else if (col[n->sudo[j][i]] == 1) {
-        return 0;
+      if (n->sudo[j][i] != 0) {
+        if (col[n->sudo[j][i]] == 0) {
+          col[n->sudo[i][j]] = 1;
+        }
+        else if (col[n->sudo[j][i]] == 1) {
+          return 0;
+        }
       }
     }
   }
