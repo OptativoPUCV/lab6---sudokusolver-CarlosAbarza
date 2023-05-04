@@ -50,14 +50,14 @@ int is_valid(Node* n){
     // int sub[10] = {0};
     for (int j = 0; j < 9; j++) {
       if (fil[n->sudo[i][j]] == 0) {
-        fil[j] = 1;
+        fil[n->sudo[i][j]] = 1;
       }
       else {
         return 0;
       }
 
       if (col[n->sudo[j][i]] == 0) {
-        col[j] = 1;
+        col[n->sudo[i][j]] = 1;
       }
       else {
         return 0;
