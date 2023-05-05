@@ -68,18 +68,17 @@ int is_valid(Node* n){
         }
       }
 
-      if (i == 0 || i == 3 || i == 6) {
-        int f=3*(i/3) + (j/3) ;
-        int c=3*(i%3) + (j%3) ;
-        if (n->sudo[f][c] != 0) {
-          if (sub[n->sudo[f][c]] == 0) {
-            sub[n->sudo[f][c]] = 1;
-          }
-          else {
-            return 0;
-          }
+      int f=3*(i/3) + (j/3) ;
+      int c=3*(i%3) + (j%3) ;
+      if (n->sudo[f][c] != 0) {
+        if (sub[n->sudo[f][c]] == 0) {
+          sub[n->sudo[f][c]] = 1;
+        }
+        else {
+          return 0;
         }
       }
+      
    }
   }
   return 1;
